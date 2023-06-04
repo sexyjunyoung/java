@@ -63,6 +63,11 @@ public class Calculator extends JFrame {
         });
         panel.add(button);
         button = new JButton("/");
+        button.addActionListener(e->{
+            operand1 = Double.parseDouble( display.getText() );
+            display.setText("0");
+            operator = "/";
+        });
         panel.add(button);
         button = new JButton("7");
         button.addActionListener(e->{
@@ -81,6 +86,11 @@ public class Calculator extends JFrame {
         });
         panel.add(button);
         button = new JButton("*");
+        button.addActionListener(e->{
+            operand1 = Double.parseDouble( display.getText() );
+            display.setText("0");
+            operator = "*";
+        });
         panel.add(button);
         button = new JButton("4");
         button.addActionListener(e->{
@@ -98,6 +108,11 @@ public class Calculator extends JFrame {
         });
         panel.add(button);
         button = new JButton("-");
+        button.addActionListener(e->{
+            operand1 = Double.parseDouble( display.getText() );
+            display.setText("0");
+            operator = "-";
+        });
         panel.add(button);
         button = new JButton("1");
         button.addActionListener(e->{
