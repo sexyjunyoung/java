@@ -26,6 +26,11 @@ public class Calculator extends JFrame {
         panel.setLayout(new GridLayout(6,4));
 
         button = new JButton("%");
+        button.addActionListener(e->{
+            operand1 = Double.parseDouble(display.getText());
+            display.setText("0");
+            operator = "%";
+        });
         panel.add(button);
         button = new JButton("CE");
         panel.add(button);
@@ -176,6 +181,9 @@ public class Calculator extends JFrame {
                 break;
             case "/":
                 answer = operand1 / operand2;
+                break;
+            case "%":
+                answer = operand1 % operand2;
                 break;
             default:
                 break;
